@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Cake</AssemblyName>
+    <TargetFrameworks Condition=" '$(PackAsTool)' != 'true'">net461;netcoreapp2.0</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <PlatformTarget>AnyCpu</PlatformTarget>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\Shared.msbuild" />
+  <!-- Project references -->
+  <ItemGroup>
+    <ProjectReference Include="..\Cake.Core\Cake.Core.csproj" />
+    <ProjectReference Include="..\Cake.Common\Cake.Common.csproj" />
+    <ProjectReference Include="..\Cake.NuGet\Cake.NuGet.csproj" />
+  </ItemGroup>
+  <!-- Global packages -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="2.9.0" />
+    <PackageReference Include="Autofac" Version="4.6.2" />
+  </ItemGroup>
+</Project>
