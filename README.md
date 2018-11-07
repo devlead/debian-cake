@@ -1,3 +1,3 @@
-# Cake Fedora Docker image
+# Cake Debian Docker image
 
-A docker image based on Fedora 28 with Cake, Mono and .NET Core pre-installed
+A docker image based on Debian stretch with Cake, Mono and .NET Core pre-installed
